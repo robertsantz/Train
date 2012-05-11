@@ -1,15 +1,15 @@
 class User < ActiveRecord::Base
   validates :first_name, :presence => true,
-                         :length => {:minimum => 1, :maximum => 20},
+                         :length => {:minimum => 1, :maximum => 20}
                          :format => {:with => /[a-zA-Z\s]+$/}
   validates :last_name, :presence => true,
-                        :length => {:minimum => 1, :maximum => 20},
+                        :length => {:minimum => 1, :maximum => 20}
                         :format => {:with => /[a-zA-Z\s]+$/}
   validates :email, :presence => true,
-                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i},
+                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
                     :uniqueness => true
   validates :usename, :presence => true,
-                      :format => {:with => /[a-z0-9\s]+$/},
+                      :format => {:with => /[a-z0-9\s]+$/}
                       :uniqueness => true
   has_many :products, :dependent => :destroy
   has_many :articles, :dependent => :destroy
