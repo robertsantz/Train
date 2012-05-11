@@ -1,4 +1,6 @@
-class HelloController < ApplicationController
+class TestController < ApplicationController
+
+
   def index
   end
 
@@ -9,4 +11,5 @@ class HelloController < ApplicationController
   def say
     @hello = "Hello World"
   end
+
 end

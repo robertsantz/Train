@@ -1,16 +1,12 @@
 class HelloController < ApplicationController
-
   def index
-    
+  end
+
+  def say_hello
+    render :text => "<h1>Say Hello</h1>"
   end
   
-  def say_hello
-    render :text => "<h1>Hello World</h1>"
-  end  
-
   def say
-    @hello="Hello World"
-    render :action => :index
+    @hello = "Hello World"
   end
-
 end

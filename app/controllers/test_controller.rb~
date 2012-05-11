@@ -1,12 +1,15 @@
-class HelloController < ApplicationController
+class TestController < ApplicationController
+
+
   def index
   end
 
   def say_hello
-    render :text => "<h1>Hello World</h1>"
+    render :text => "<h1>Say Hello</h1>"
   end
   
   def say
     @hello = "Hello World"
   end
+
 end
