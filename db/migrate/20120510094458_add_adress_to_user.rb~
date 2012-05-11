@@ -1,0 +1,5 @@
+class AddAdressToUser < ActiveRecord::Migration
+  def change
+    add_coloumn :users , :address, :string
+  end
+end
