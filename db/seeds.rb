@@ -6,11 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-articles = Article.create[{:title => "Pesawat Hilang",:body => "Hilang di ketinggian 6000m dpal"},{:title => "Gayus Tambunan",:body => "Trendsetter Mafia Pajak"},{:title => "PT Walden Global Service",:body => "Perusahaan IT di Bandung berbasis ROR"},{:title =>"Universitas Dian Nuswantoro",:body => "Universitas IT terbesar di Semarang"},{:title =>"Punokawan",:body => "Bagong, Semar, Petruk, Gareng"}]
+articles = Article.create([ {:title => "Pesawat Hilang",:body => "Hilang di ketinggian 6000m dpal"},{:title => "Gayus Tambunan",:body => "Trendsetter Mafia Pajak"},{:title => "PT Walden Global Service",:body => "Perusahaan IT di Bandung berbasis ROR"},{:title =>"Universitas Dian Nuswantoro",:body => "Universitas IT terbesar di Semarang"},{:title =>"Punokawan",:body => "Bagong, Semar, Petruk, Gareng"} ])
 
-comments = Comment.create[{:content => "Sempurna"},{:content => "Baik"},{:content => "Cukup"},{:content => "Kurang"},{:content => "Parah"}]
+comments = Comment.create([ {:content => "Sempurna"},{:content => "Baik"},{:content => "Cukup"},{:content => "Kurang"},{:content => "Parah"} ])
 
-countries = Country.create[{:code => "B",:name =>"Jakarta"},{:code => "D",:name =>"Bandung"},{:code => "Z",:name =>"Sumedang"},{:code => "W",:name =>"Surabaya"},{:code => "H",:name =>"Semarang"}]
+countries = Country.create([ {:code => "B",:name =>"Jakarta"},{:code => "D",:name =>"Bandung"},{:code => "Z",:name =>"Sumedang"},{:code => "W",:name =>"Surabaya"},{:code => "H",:name =>"Semarang"} ])
 
-users = User.create[{:first_name => "Joko",:last_name => "Wibowo",:email => "joko.wibowo@whatever.com",:username => "jokowibowo",:address => "jl. jokowibowo",:age => 20},{},{},{},{}]
+users = User.create([ {:first_name => "Joko",:last_name => "Wibowo",:email => "joko.wibowo@whatever.com",:username => "jokowibowo",:address => "jl. jokowibowo",:age => 20},{:first_name => "Adi",:last_name => "Udinus",:email => "adi.udinus@whatever.com",:username => "adiudinus",:address => "jl. adiudinus",:age => 21},{:first_name => "Ardian",:last_name => "Udinus",:email => "ardian.udinus@whatever.com",:username => "ardianudinus",:address => "jl. ardianudinus",:age => 22},{:first_name => "Varid",:last_name => "Udinus",:email => "varid.udinus@whatever.com",:username => "varidudinus",:address => "jl. varidudinus",:age => 23},{:first_name => "Benny",:last_name => "Stefanus",:email => "stefanus.benny@whatever.com",:username => "stefanusbenny",:address => "jl. stefanusbenny",:age => 24} ])
 
