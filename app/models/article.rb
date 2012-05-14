@@ -3,5 +3,5 @@ class Article < ActiveRecord::Base
                    :uniqueness => true
   has_many :comments, :dependent => :destroy
   belongs_to :user
-  scope :rating_is_above, lambda {|rating| where("rating > ?", rating)}
+  scope :rating_is_and_above, lambda {|rating| where("rating > ?", rating)}
 end

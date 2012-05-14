@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Article</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div>
+  <%= @article.each do |t|%>
+  <%= puts "#{t.title} #{t.body}" %>
+  <%= end %>
+  </div>
+
+
+</body>
+</html>
