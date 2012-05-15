@@ -1,0 +1,14 @@
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.list_articles{
+  width:90%;
+}
+
+.list_articles td{
+  border: 1px solid black;
+  width:30%;
+}
+

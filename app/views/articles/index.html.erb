@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Article</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div>
-  <%= @article.each do |t|%>
-  <%= puts "#{t.title} #{t.body}" %>
-  <%= end %>
-  </div>
+<h1>List Of Articles</h1>
+<table class=list_articles>
+  <tr>
+    <td>Title</td>
+    <td>Content</td>
+    <td>Option</td>
+  </tr>
+  <% @articles.each do |article|%>
+  <tr>
+  <td><%= article.title %></td>
+  <td><%= article.body %></td>
+  <td><%= link_to 'Edit', edit_article_path(article.id) %> <%= link_to 'Delete', article_path(article.id), :confirm => 'Are you sure want to delete this item?', :method => :delete %>
+  </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Add new Article", new_article_path%></p>
 
 
-</body>
-</html>

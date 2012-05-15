@@ -1,4 +1,6 @@
 Wgs::Application.routes.draw do
+  resources :articles
+  #edit_article_path(params[:id])
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
