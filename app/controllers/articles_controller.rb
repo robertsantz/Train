@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_filter :require_login, :only => [:new, :create, :edit, :update, :delete]
 
   def new
     @article = Article.new
@@ -8,8 +9,10 @@ class ArticlesController < ApplicationController
   def create
     @article= Article.new(params[:article])
     if @article.save
+      flash[:notice] = "Article successfully saved"
       redirect_to :action => :index
     else
+      flash.now[:notice] = "Article failed to saved"
       render :action => :new
     end
   end

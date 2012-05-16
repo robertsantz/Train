@@ -1,5 +1,15 @@
 Wgs::Application.routes.draw do
+  get "sessions/new"
+
+  get "users/new"
+  get "log_in" => "sessions#new", :as => "log_in" 
+  resources :sessions 
+
   resources :articles
+  get "sign_up" => "users#new", :as => "sign_up"
+  root :to => "articles#index"
+  resources :users
+  get "log_out" => "sessions#destroy", :as => "log_out"
   #edit_article_path(params[:id])
   # The priority is based upon order of creation:
   # first created -> highest priority.
