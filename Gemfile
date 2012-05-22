@@ -9,6 +9,9 @@ gem 'mysql2'
 gem 'execjs'
 gem 'therubyracer'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'recaptcha', :require => 'recaptcha/rails'
+gem 'exception_notification'
+gem "awesome_print"
 
 
 # Gems used only for assets and not required

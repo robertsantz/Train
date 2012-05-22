@@ -1,0 +1,20 @@
+<h1>List Of Articles</h1>
+<%= flash[:notice] %>
+<table class=list_articles>
+  <tr>
+    <td>Title</td>
+    <td>Content</td>
+    <td>Option</td>
+  </tr>
+  <% @articles.each do |article|%>
+  <tr>
+  <td><%= article.title %></td>
+  <td><%= article.body %></td>
+  <td><%= link_to 'Show', admin_article_path(article.id) %> <%= link_to 'Edit', edit_admin_article_path(article.id) %> <%= link_to 'Delete', admin_article_path(article.id), :confirm => 'Are you sure want to delete this item?', :method => :delete %>
+  </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Add new Article", new_article_path%></p>
+
+

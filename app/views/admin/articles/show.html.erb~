@@ -1,0 +1,24 @@
+<h1>Show Article</h1>
+<%= flash[:notice] %>
+<table>
+  <tr>
+    <td><%= @article.title %>
+    </td>
+  </tr>  <tr>
+    <td><%= @article.body %>
+    </td>
+  </tr>
+</table>
+<br /><br /><br /><br />
+
+<% unless(current_user.nil?)%>
+   <%= form_for @comment, :url => comments_path do |comment| -%>
+      <%= comment.text_area :content %>
+      <%= comment.hidden_field :article_id, :value => @article.id %>
+      <%= submit_tag "comment" %>
+  <% end -%>
+<% end %>
+
+<%= link_to 'Home', articles_path %>
+
+

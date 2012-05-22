@@ -42,5 +42,5 @@ Wgs::Application.configure do
   config.middleware.use ExceptionNotifier,
     :email_prefix => "[Whatever]",
     :sender_address => %{"notifier" <notifier@example.com>},
-    :exception_recipients => %w{robert.saintz@gmail.com}
+    :exception_recipients => %w{martin@kiranatama.com}
 end

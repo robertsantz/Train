@@ -1,7 +1,7 @@
 <h1>Log in</h1>
-
+<%= flash[:error] %>
   <%= form_tag sessions_path do %> 
-  <%= flash[:alert] %><%= flash[:error] %>
+  <%= flash[:alert] %>
   <p> 
     <%= label_tag :email %><br /> 
     <%= text_field_tag :email, params[:email] %> 

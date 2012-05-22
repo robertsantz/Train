@@ -7,7 +7,6 @@ Wgs::Application.routes.draw do
   namespace :admin do
     resources :articles
   end
-  resources :articles
   get "sign_up" => "users#new", :as => "sign_up"
   root :to => "articles#index"
   resources :users

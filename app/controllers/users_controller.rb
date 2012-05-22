@@ -6,11 +6,17 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    if @user.save
-      UserMailer.registration_confirmation(@user).deliver
-      redirect_to root_url, :notice => "Signed up!"
+    if verify_recaptcha
+      if @user.save
+        UserMailer.registration_confirmation(@user).deliver
+        redirect_to root_url, :notice => "Signed up!"
+      else
+        render "new"
+      end
     else
-      render "new"
+    flash[:error] = "There was an error with the recaptcha code below.
+                     Please re-enter the code and click submit."
+    render "new"
     end
   end
 
