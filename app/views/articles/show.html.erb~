@@ -11,7 +11,6 @@
 </table>
 <br /><br /><br /><br />
 
-<!--bagian ini untuk menampilkan comment yang dimiliki oleh article tersebut -->
 <div id="comments">
   <%= render :partial => "comments", :locals => {:comments => @comments} %>
 </div><br /><br />

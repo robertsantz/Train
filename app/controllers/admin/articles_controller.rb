@@ -22,7 +22,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   def update
      @article = Article.find(params[:id])
-     if @article.update_attributes(params[:article])
+   if @article.update_attributes(params[:article])
      redirect_to admin_articles_path, :notice => 'Article was successfully updated.'
    else
      flash[:error] = 'Article was failed to update.'
